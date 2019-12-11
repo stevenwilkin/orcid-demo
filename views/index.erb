@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>ORCID demo</title>
+  </head>
+  <body>
+    <% if session[:omniauth] %>
+      ORCID: <%= session[:omniauth][:uid] %>
+    <% else %>
+      <a href="/auth/orcid">Fetch ORCID</a>
+    <% end %>
+  </body>
+</html>
